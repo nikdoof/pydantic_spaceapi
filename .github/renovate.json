@@ -1,0 +1,18 @@
+{
+    "lockFileMaintenance": {
+        "enabled": true,
+        "automerge": true
+    },
+    "packageRules": [
+        {
+            "matchPackageNames": [
+                "ruff"
+            ],
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "automerge": true
+        }
+    ]
+}

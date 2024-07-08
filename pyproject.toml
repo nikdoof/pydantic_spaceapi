@@ -12,7 +12,19 @@ packages = [{include = "pydantic_spaceapi"}]
 python = "^3.10"
 poetry = "^1.7.1"
 pydantic-extra-types = "^2.8.2"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
 ruff = "^0.5.1"
+
+[tool.poetry.group.github]
+optional = true
+
+[tool.poetry.group.github.dependencies]
+pytest-github-actions-annotate-failures = "^0.2.0"
 
 [build-system]
 requires = ["poetry-core"]

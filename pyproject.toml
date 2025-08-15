@@ -1,34 +1,15 @@
-[tool.poetry]
+[project]
 name = "pydantic-spaceapi"
 version = "0.1.0"
-description = ""
-authors = ["Andrew Williams <andy@tensixtyone.com>"]
+description = "Pydantic types for the SpaceAPI spec"
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/nikdoof/pydantic-spaceapi/"
-packages = [{include = "pydantic_spaceapi"}]
+requires-python = ">=3.12"
+dependencies = ["pydantic-extra-types>=2.10.5"]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-poetry = "^2.0.0"
-pydantic-extra-types = "^2.8.2"
-
-[tool.poetry.group.test]
-optional = true
-
-[tool.poetry.group.test.dependencies]
-pytest = "^8.0.0"
-ruff = "^0.12.0"
-
-[tool.poetry.group.github]
-optional = true
-
-[tool.poetry.group.github.dependencies]
-pytest-github-actions-annotate-failures = "^0.3.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = ["pytest>=8.4.1", "ruff>=0.12.9"]
+github = ["pytest-github-actions-annotate-failures>=0.3.0"]
 
 [tool.ruff]
 ignore = ["E501"]

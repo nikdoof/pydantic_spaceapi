@@ -1,6 +1,6 @@
 [project]
 name = "pydantic-spaceapi"
-version = "0.1.0"
+version = "0.2.0"
 description = "Pydantic types for the SpaceAPI spec"
 license = "MIT"
 readme = "README.md"
